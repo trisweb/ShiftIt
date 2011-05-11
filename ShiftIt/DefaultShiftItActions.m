@@ -34,10 +34,10 @@ NSRect ShiftIt_Left(NSSize screenSize, NSRect windowRect) {
 	CGFloat twoThirdsWidth = screenSize.width * 2 / 3;
 	
 	if (windowRect.origin.x == 0) {
-		if (windowRect.size.width == halfWidth) {
+		if (windowRect.size.width <= halfWidth) {
 			r.size.width = thirdWidth;	
 		}
-		if (windowRect.size.width == thirdWidth) {
+		if (windowRect.size.width <= thirdWidth) {
 			r.size.width = twoThirdsWidth;	
 		}		
 	}	
@@ -58,12 +58,12 @@ NSRect ShiftIt_Right(NSSize screenSize, NSRect windowRect) {
 	CGFloat thirdWidth = screenSize.width / 3;
 	CGFloat twoThirdsWidth = screenSize.width * 2 / 3;
 	
-	if (windowRect.origin.x == halfWidth && windowRect.size.width == halfWidth) {
+	if (windowRect.origin.x == halfWidth && windowRect.size.width <= halfWidth) {
 			r.size.width = thirdWidth;
 			r.origin.x = twoThirdsWidth;
 	}
 	
-	if (windowRect.origin.x == twoThirdsWidth && windowRect.size.width == thirdWidth) {
+	if (windowRect.origin.x == twoThirdsWidth && windowRect.size.width <= thirdWidth) {
 			r.size.width = twoThirdsWidth;
 			r.origin.x = thirdWidth;
 	}		
