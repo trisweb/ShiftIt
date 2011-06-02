@@ -178,14 +178,14 @@ NSRect ShiftIt_Increase(NSSize screenSize, NSRect windowRect) {
 	if (lastActionExecuted == @"left" || lastActionExecuted == @"right") {
 		//wider
 		int whichSide;
-		(windowRect.origin.x == 0) ? (whichSide = 0) : (whichSide = 1);
+		(lastActionExecuted == @"left") ? (whichSide = 0) : (whichSide = 1);
 		
 		switch (whichSide) {
 			case 0: // window origin is in left region			
 				r.size.width = windowRect.size.width + (screenSize.width/12);
 				r.size.height = windowRect.size.height;
 				
-				r.origin.x = windowRect.origin.x;
+				r.origin.x = 0;
 				r.origin.y = windowRect.origin.y - menuBarHeight;
 				
 				break;
@@ -242,14 +242,14 @@ NSRect ShiftIt_Reduce(NSSize screenSize, NSRect windowRect) {
 	if (lastActionExecuted == @"left" || lastActionExecuted == @"right") {
 		//thinner
 		int whichSide;
-		(windowRect.origin.x == 0) ? (whichSide = 0) : (whichSide = 1);
+		(lastActionExecuted == @"left") ? (whichSide = 0) : (whichSide = 1);
 		
 		switch (whichSide) {
 			case 0: // window origin is in left region			
 				r.size.width = windowRect.size.width - (screenSize.width/12);
 				r.size.height = windowRect.size.height;
 				
-				r.origin.x = windowRect.origin.x;
+				r.origin.x = 0;
 				r.origin.y = windowRect.origin.y - menuBarHeight;
 				
 				break;
