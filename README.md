@@ -19,10 +19,13 @@ Instructions: Just Unzip, drag to the Applications folder, and double-click to s
 
 Notes on this Fork
 ------------------
-I created this fork from the original at fikovnik/ShiftIt because it had become stagnant for the past 2 years, and because I think
-that the original incarnation, with the simple feature set and small footprint, is the best one. I want to provide a good location
+I created this fork from the original at fikovnik/ShiftIt mainly becuase pre-compiled builds are so hard to find. Also because 
+it had become stagnant for the past 2 years, and because I think that the original incarnation, with the simple feature set and 
+small footprint, is the best one. 
+
+I want to provide a good location
 to improve on this simple foundation, for myself to practice and work on OSX native applications, and provide ready-made builds for 
-OSX 10.7 and up. Thanks! -trisweb
+OSX 10.7 and up. Comments/Issues/Pull Requests are welcome and I'll do my best! Thanks! -trisweb
 
 Requirements
 ------------
