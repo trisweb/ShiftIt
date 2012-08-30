@@ -1571,11 +1571,7 @@
 					<string>549.IBPluginDependency</string>
 					<string>550.IBAttributePlaceholdersKey</string>
 					<string>550.IBPluginDependency</string>
-<<<<<<< HEAD
-					<string>551.IBAttributePlaceholdersKey</string>
-=======
 					<string>550.IBViewBoundsToFrameTransform</string>
->>>>>>> arjun/master
 					<string>551.IBPluginDependency</string>
 					<string>551.IBViewBoundsToFrameTransform</string>
 					<string>554.IBPluginDependency</string>
@@ -1611,13 +1607,7 @@
 				</object>
 				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-<<<<<<< HEAD
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-=======
 					<string>{{362, 35}, {303, 439}}</string>
->>>>>>> arjun/master
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{362, 35}, {303, 439}}</string>
 					<integer value="1"/>
