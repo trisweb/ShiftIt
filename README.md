@@ -10,6 +10,12 @@ It is a fork from the original [ShiftIt][1] by [Aravindkumar Rajendiran][2] whic
 
 License: [GNU General Public License v3][5]
 
+Notes on this Fork
+------------------
+I created this fork from the original at fikovnik/ShiftIt because it had become stagnant for the past 2 years, and because I think
+that the original incarnation, with the simple feature set and small footprint, is the best one. I want to provide a good location
+to improve on this simple foundation and provide ready-made builds for OSX 10.7+.
+
 Requirements
 ------------
 
