@@ -2,6 +2,8 @@
 
 *Managing window size and position in OSX*
 
+[ShiftIt GitHub Pages Page][16] (download links & marketing material)
+
 About
 -----
 
@@ -101,3 +103,4 @@ Change Log:
   [13]: https://github.com/fikovnik/ShiftIt/pull/88
   [14]: https://github.com/trisweb/ShiftIt/raw/master/builds/ShiftIt.zip
   [15]: https://github.com/fikovnik/ShiftIt
+  [16]: http://trisweb.github.com/ShiftIt/
