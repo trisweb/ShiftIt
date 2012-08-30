@@ -14,6 +14,7 @@ Downloading Pre-Made Builds
 ---------------------------
 
 [Download ShiftIt for Mac OSX 10.7 and Up][14]
+---
 
 Instructions: Just Unzip, drag to the Applications folder, and double-click to start!
 
