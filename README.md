@@ -1,6 +1,6 @@
 <h1><img src="https://github.com/fikovnik/ShiftIt/raw/master/artwork/ShiftIt.png" width="72" height="72" valign="middle"/>ShiftIt </h1>
 
-*Managing window size and position in OSX*
+*Quickly Reposition and Maximize OSX Windows*
 
 [ShiftIt GitHub Pages Page][16] (download links & marketing material)
 
@@ -26,12 +26,18 @@ If you run into any issues, please let me know.
 Notes on this Fork
 ------------------
 I created this fork from the original at fikovnik/ShiftIt mainly becuase pre-compiled builds are so hard to find. Also because 
-it had become stagnant for the past 2 years, and because I think that the original incarnation, with the simple feature set and 
-small footprint, is the best one. 
+it had become stagnant for the past 2 years, and because I think that the original version—with the simple feature set and 
+small footprint—is the best and most stable thus far.
+
+Please note that I don't intend to take over the project or step on any toes, I'm only attempting to organize
+and package the existing product into something that people (and ot just those familiar with Xcode!) can 
+use. I welcome any contributions, pull requests, and continued work from the community.
 
 I want to provide a good location
 to improve on this simple foundation, for myself to practice and work on OSX native applications, and provide ready-made builds for 
-OSX 10.7 and up. Comments/Issues/Pull Requests are welcome and I'll do my best! Thanks! -trisweb
+OSX 10.7 and up. Comments/Issues/Pull Requests are welcome and I'll do my best! Thanks! 
+
+   - trisweb
 
 Requirements
 ------------
