@@ -64,6 +64,12 @@ Launch the application again. It will open the preference dialog.
 Change Log:
 ---------------------------
 
+**1.5.1**
+
+* Updated Retina icon based on ErikMason's pull [here][13]
+* Removed old X11 project.
+
+(Changelogs prior to 1.5.1 are probably lost to the nether, but here are the old links)
   - [1.5][9]
   - [1.4.1][10]
   - [1.4][11]
@@ -80,4 +86,5 @@ Change Log:
   [9]: http://nkuyu.net/apps/shiftit/release-notes-1.5.html
   [10]: http://nkuyu.net/apps/shiftit/release-notes-1.4.1.html
   [11]: http://nkuyu.net/apps/shiftit/release-notes-1.4.html
-  [12]: http://nkuyu.net/apps/shiftit/release-notes-1.3.htmlBlockquotehow can I get it back?
+  [12]: http://nkuyu.net/apps/shiftit/release-notes-1.3.html
+  [13]: https://github.com/fikovnik/ShiftIt/pull/88
