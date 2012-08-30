@@ -6,21 +6,30 @@ About
 -----
 
 ShiftIt is an application for OSX that allows you to quickly manipulate window position and size using keyboard shortcuts. It intends to become a full featured window organizer for OSX.
-It is a fork from the original [ShiftIt][1] by [Aravindkumar Rajendiran][2] which is not longer under development. For discussing any sort of stuff about this app, please create a new issue [right here][3] in github. There is also quite a quiet [google group][4], but it's better to post stuff directly here.
+It is a fork from the [fork by Filip Krikava][15] of the original [ShiftIt][1] by [Aravindkumar Rajendiran][2] which is not longer under development. For discussing any sort of stuff about this app, please create a new issue [right here][3] in github. There is also quite a quiet [google group][4], but it's better to post stuff directly here.
 
 License: [GNU General Public License v3][5]
 
 Downloading Pre-Made Builds
 ---------------------------
 
-More soon!
+Pre-compiled builds of ShiftIt are now available for OSX 10.7 and up!
+
+**[Download ShiftIt for Mac OSX 10.7 and Up][14]**
+
+Instructions: Just Unzip, drag to the Applications folder, and double-click to start!
+
+If you run into any issues, please let me know.
 
 Notes on this Fork
 ------------------
-I created this fork from the original at fikovnik/ShiftIt because it had become stagnant for the past 2 years, and because I think
-that the original incarnation, with the simple feature set and small footprint, is the best one. I want to provide a good location
+I created this fork from the original at fikovnik/ShiftIt mainly becuase pre-compiled builds are so hard to find. Also because 
+it had become stagnant for the past 2 years, and because I think that the original incarnation, with the simple feature set and 
+small footprint, is the best one. 
+
+I want to provide a good location
 to improve on this simple foundation, for myself to practice and work on OSX native applications, and provide ready-made builds for 
-OSX 10.7 and up. Thanks! -trisweb
+OSX 10.7 and up. Comments/Issues/Pull Requests are welcome and I'll do my best! Thanks! -trisweb
 
 Requirements
 ------------
@@ -88,3 +97,5 @@ Change Log:
   [11]: http://nkuyu.net/apps/shiftit/release-notes-1.4.html
   [12]: http://nkuyu.net/apps/shiftit/release-notes-1.3.html
   [13]: https://github.com/fikovnik/ShiftIt/pull/88
+  [14]: https://github.com/trisweb/ShiftIt/raw/master/builds/ShiftIt.zip
+  [15]: https://github.com/fikovnik/ShiftIt
