@@ -13,9 +13,13 @@ License: [GNU General Public License v3][5]
 Downloading Pre-Made Builds
 ---------------------------
 
+Pre-compiled builds of ShiftIt are now available for OSX 10.7 and up!
+
 **[Download ShiftIt for Mac OSX 10.7 and Up][14]**
 
 Instructions: Just Unzip, drag to the Applications folder, and double-click to start!
+
+If you run into any issues, please let me know.
 
 Notes on this Fork
 ------------------
