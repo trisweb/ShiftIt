@@ -76,7 +76,9 @@ Change Log:
 **1.5.1**
 
 * Updated Retina icon based on ErikMason's pull [here][13]
-* Removed old X11 project.
+* Removed old X11 support.
+* Added 1/3-1/2-2/3 size cycling from harob / miaobiz forks.
+* Fixed window resizing for windows larger than the current monitor (bizkit)
 
 (Changelogs prior to 1.5.1 are probably lost to the nether, but here are the old links)
   - [1.5][9]
