@@ -19,6 +19,9 @@
 
 #import "DefaultShiftItActions.h"
 #import "FMTDefines.h"
+#import "WindowSizer.h"
+
+extern short GetMBarHeight(void);
 
 NSRect ShiftIt_Left(NSSize screenSize, NSRect windowRect) {
 	NSRect r;
@@ -29,6 +32,19 @@ NSRect ShiftIt_Left(NSSize screenSize, NSRect windowRect) {
 	r.size.width = screenSize.width / 2;
 	r.size.height = screenSize.height;
 	
+	CGFloat halfWidth = screenSize.width / 2;
+	CGFloat thirdWidth = screenSize.width / 3;
+	CGFloat twoThirdsWidth = screenSize.width * 2 / 3;
+	
+	if (windowRect.origin.x == 0) {
+		if ((windowRect.size.width <= halfWidth * 1.1) && (windowRect.size.width >= halfWidth * 0.9)) {
+			r.size.width = thirdWidth;	
+		}
+		if ((windowRect.size.width <= thirdWidth * 1.1) && (windowRect.size.width >= thirdWidth * 0.9)) {
+			r.size.width = twoThirdsWidth;	
+		}		
+	}	
+
 	return r;
 }
 
@@ -40,6 +56,20 @@ NSRect ShiftIt_Right(NSSize screenSize, NSRect windowRect) {
 	
 	r.size.width = screenSize.width / 2;
 	r.size.height = screenSize.height;
+
+	CGFloat halfWidth = screenSize.width / 2;
+	CGFloat thirdWidth = screenSize.width / 3;
+	CGFloat twoThirdsWidth = screenSize.width * 2 / 3;
+	
+	if ((windowRect.origin.x == halfWidth) && (windowRect.size.width <= halfWidth * 1.1) && (windowRect.size.width >= halfWidth * 0.9)) {
+			r.size.width = thirdWidth;
+			r.origin.x = twoThirdsWidth;
+	}
+	
+	if ((windowRect.origin.x == twoThirdsWidth) && (windowRect.size.width <= thirdWidth * 1.1) && (windowRect.size.width >= thirdWidth * 0.9)) {
+			r.size.width = twoThirdsWidth;
+			r.origin.x = thirdWidth;
+	}		
 
 	return r;
 }
@@ -135,6 +165,134 @@ NSRect ShiftIt_Center(NSSize screenSize, NSRect windowRect) {
 	r.origin.y = (screenSize.height / 2)-(windowRect.size.height / 2);	
 	
 	r.size = windowRect.size;
+	
+	return r;
+}
+
+//wider
+NSRect ShiftIt_Increase(NSSize screenSize, NSRect windowRect) {		
+	NSRect r;
+	float menuBarHeight = GetMBarHeight();
+	
+	NSString *lastActionExecuted = [[WindowSizer sharedWindowSize] lastActionExecuted];
+	if (lastActionExecuted == @"left" || lastActionExecuted == @"right") {
+		//wider
+		int whichSide;
+		(lastActionExecuted == @"left") ? (whichSide = 0) : (whichSide = 1);
+		
+		switch (whichSide) {
+			case 0: // window origin is in left region			
+				r.size.width = windowRect.size.width + (screenSize.width/12);
+				r.size.height = windowRect.size.height;
+				
+				r.origin.x = 0;
+				r.origin.y = windowRect.origin.y - menuBarHeight;
+				
+				break;
+			case 1: // window origin is in right region
+				r.size.width = windowRect.size.width + (screenSize.width/12);
+				r.size.height = windowRect.size.height;
+				
+				r.origin.x = screenSize.width - r.size.width;
+				r.origin.y = windowRect.origin.y - menuBarHeight;
+				
+				break;
+			default:
+				break;
+		}
+	} else if (lastActionExecuted == @"top" || lastActionExecuted == @"bottom") {
+		//taller
+		// detect which side of the screen the window is touching the side of the display
+		int topOrBottom;
+		(windowRect.origin.y - menuBarHeight == 0) ? (topOrBottom = 0) : (topOrBottom = 1);
+		
+		switch (topOrBottom) {
+			case 0: // window origin is in upper region			
+				r.size.width = windowRect.size.width;
+				r.size.height = windowRect.size.height + (screenSize.height/12);
+				
+				r.origin.x = windowRect.origin.x;
+				r.origin.y = windowRect.origin.y - menuBarHeight;
+				
+				break;
+			case 1: // window origin is in lower region
+				r.size.width = windowRect.size.width;
+				r.size.height = windowRect.size.height + (screenSize.height/12);
+				
+				r.origin.x = 0;
+				r.origin.y = screenSize.height - r.size.height;
+				
+				break;
+			default:
+				break;
+		}
+		
+	} else
+		return windowRect;
+	
+	return r;
+}
+
+//taller
+NSRect ShiftIt_Reduce(NSSize screenSize, NSRect windowRect) {
+	NSRect r;
+	float menuBarHeight = GetMBarHeight();
+	
+	NSString *lastActionExecuted = [[WindowSizer sharedWindowSize] lastActionExecuted];
+	if (lastActionExecuted == @"left" || lastActionExecuted == @"right") {
+		//thinner
+		int whichSide;
+		(lastActionExecuted == @"left") ? (whichSide = 0) : (whichSide = 1);
+		
+		switch (whichSide) {
+			case 0: // window origin is in left region			
+				r.size.width = windowRect.size.width - (screenSize.width/12);
+				r.size.height = windowRect.size.height;
+				
+				r.origin.x = 0;
+				r.origin.y = windowRect.origin.y - menuBarHeight;
+				
+				break;
+			case 1: // window origin is in right region
+				r.size.width = windowRect.size.width - (screenSize.width/12);
+				r.size.height = windowRect.size.height;
+				
+				r.origin.x = screenSize.width - r.size.width;
+				r.origin.y = windowRect.origin.y - menuBarHeight;
+				
+				break;
+			default:
+				break;
+		}
+	} else if (lastActionExecuted == @"top" || lastActionExecuted == @"bottom") {
+		//shorter
+		// detect which side of the screen the window is touching the side of the display
+		int topOrBottom;
+		(windowRect.origin.y - menuBarHeight == 0) ? (topOrBottom = 0) : (topOrBottom = 1);
+		
+		switch (topOrBottom) {
+			case 0: // window origin is in upper region			
+				r.size.width = windowRect.size.width;
+				r.size.height = windowRect.size.height - (screenSize.height/12);
+				
+				r.origin.x = windowRect.origin.x;
+				r.origin.y = windowRect.origin.y - menuBarHeight;
+				
+				break;
+			case 1: // window origin is in lower region
+				r.size.width = windowRect.size.width;
+				r.size.height = windowRect.size.height - (screenSize.height/12);
+				
+				r.origin.x = 0;
+				r.origin.y = screenSize.height - r.size.height;
+				
+				break;
+			default:
+				break;
+		}
+		
+	} else
+		return windowRect;
 	
 	return r;
 }
