@@ -135,7 +135,7 @@ NSString *const kHotKeysTabViewItemIdentifier = @"hotKeys";
 	}
 	FMTAssertNotNil(action);
 	
-	FMTDevLog(@"ShiftIt action %@ hotkey changed: ", [action identifier]);
+	FMTDevLog(@"ShiftIt action %@ hotkey changed: %ld", [action identifier], newKeyCombo.code);
 	
 	NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithCapacity:3];
 	[userInfo setObject:[action identifier] forKey:kActionIdentifierKey];
@@ -153,8 +153,8 @@ NSString *const kHotKeysTabViewItemIdentifier = @"hotKeys";
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
 	for (ShiftItAction *action in [allShiftActions allValues]) {
-		SRRecorderControl *recorder = [hotKeysView viewWithTag:kSISRUITagPrefix+[action uiTag]];
-		FMTAssertNotNil(recorder);
+        NSInteger viewtag = kSISRUITagPrefix+[action uiTag];
+		SRRecorderControl *recorder = [hotKeysView viewWithTag:viewtag];
 
 		NSString *identifier = [action identifier];
 		
