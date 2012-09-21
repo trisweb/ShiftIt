@@ -81,6 +81,10 @@ Launch the application again. It will open the preference dialog.
 Change Log:
 ---------------------------
 
+**1.5.2** 9/21/2012
+
+* Fixed setting of custom hotkeys (Issue #4)
+
 **1.5.1**
 
 * Updated Retina icon based on ErikMason's pull [here][13]
