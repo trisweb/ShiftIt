@@ -43,7 +43,7 @@
 }
 
 - (NSString *)description {
-	return FMTStr(@"code: %d modifiers: %@ (%ld)", keyCode_, FMTStringForCocoaModifiers(modifiers_), modifiers_);
+	return FMTStr(@"code: %ld modifiers: %@ (%ld)", keyCode_, FMTStringForCocoaModifiers(modifiers_), modifiers_);
 }
 
 - (BOOL)isEqualTo:(id)object {
