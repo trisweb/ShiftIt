@@ -19,6 +19,8 @@ Pre-compiled builds of ShiftIt are now available for OSX 10.7 and up!
 
 **[Download ShiftIt for Mac OSX 10.7 and Up][14]**
 
+Latest Version: 1.5.2 (Sept 21 2012)
+
 Instructions: Just Unzip, drag to the Applications folder, and double-click to start!
 
 If you run into any issues, please let me know.
