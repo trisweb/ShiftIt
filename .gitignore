@@ -1,0 +1,4 @@
+ShiftIt
+builds
+*.original
+.DS_Store
