@@ -68,7 +68,7 @@ Note: If you have a problem with the build - xcode complaining about the Shortcu
 FAQ
 ---
 
-**I disabled the `Show Icon in Menu Bar` in the preferences, how can I get it back?how can I get it back?**
+**I disabled the `Show Icon in Menu Bar` in the preferences, how can I get it back?**
 
 Launch the application again. It will open the preference dialog.
 
