@@ -31,15 +31,13 @@ I created this fork from the original at fikovnik/ShiftIt mainly becuase pre-com
 it had become stagnant for the past 2 years, and because I think that the original version—with the simple feature set and 
 small footprint—is the best and most stable thus far.
 
+The latest build was updated September 21st 2012 and is compiled for OSX 10.7/10.8 including updates for Retina MacBook Pros.
+
 Please note that I don't intend to take over the project or step on any toes, I'm only attempting to organize
 and package the existing product into something that people (and ot just those familiar with Xcode!) can 
 use. I welcome any contributions, pull requests, and continued work from the community.
 
-I want to provide a good location
-to improve on this simple foundation, for myself to practice and work on OSX native applications, and provide ready-made builds for 
-OSX 10.7 and up. Comments/Issues/Pull Requests are welcome and I'll do my best! Thanks! 
-
-   - trisweb
+   @trisweb
 
 Requirements
 ------------
