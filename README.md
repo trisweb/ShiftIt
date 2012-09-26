@@ -111,6 +111,6 @@ Change Log:
   [11]: http://nkuyu.net/apps/shiftit/release-notes-1.4.html
   [12]: http://nkuyu.net/apps/shiftit/release-notes-1.3.html
   [13]: https://github.com/fikovnik/ShiftIt/pull/88
-  [14]: https://github.com/trisweb/ShiftIt/raw/master/builds/ShiftIt.zip
+  [14]: https://github.com/downloads/trisweb/ShiftIt/ShiftIt.zip
   [15]: https://github.com/fikovnik/ShiftIt
   [16]: http://trisweb.github.com/ShiftIt/
