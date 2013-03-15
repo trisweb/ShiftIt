@@ -2,9 +2,6 @@
 
 *Quickly Reposition and Maximize OSX Windows*
 
-[ShiftIt GitHub Pages Page][16] (download links & marketing material)
-
-
 Notes on this Fork
 ------------------
 
